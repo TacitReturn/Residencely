@@ -11,27 +11,24 @@
 <main class="py-4">
     <div class="container">
         @auth
-{{--            @include("partials.success")--}}
-{{--            @include("partials.errors")--}}
+            {{--            @include("partials.success")--}}
+            {{--            @include("partials.errors")--}}
             <div class="row">
                 <div class="col-md-3">
                     <div class="list-group">
                         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                             Properties
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-                        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-                        <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
                     </div>
                 </div>
                 <div class="col-md-9">
                     @yield('content')
                 </div>
             </div>
-        @else
-            @yield('content')
         @endauth
+
+            @yield('content')
+
     </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('property_managers', function (Blueprint $table) {
             $table->id();
+            //TODO: Create property manager columns
             $table->timestamps();
         });
     }
