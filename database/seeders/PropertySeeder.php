@@ -2,10 +2,10 @@
 
     namespace Database\Seeders;
 
-    use App\Models\PropertyManager;
+    use App\Models\Property;
     use Illuminate\Database\Seeder;
 
-    class PropertyManagerSeeder extends Seeder
+    class PropertySeeder extends Seeder
     {
         /**
          * Run the database seeds.
@@ -14,6 +14,6 @@
          */
         public function run()
         {
-            PropertyManager::factory()->count(3)->create();
+            Property::factory()->count(10)->create();
         }
     }

@@ -1,11 +1,17 @@
 <?php
 
-namespace App\Models;
+    namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Factories\HasFactory;
+    use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class PropertyManager extends Model
-{
-    use HasFactory;
-}
+    class PropertyManager extends Model
+    {
+        use HasFactory;
+
+        public function property(): HasMany
+        {
+            return $this->hasMany(Property::class);
+        }
+    }

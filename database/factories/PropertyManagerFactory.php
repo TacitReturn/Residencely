@@ -2,7 +2,6 @@
 
     namespace Database\Factories;
 
-    use Carbon\Carbon;
     use Exception;
     use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -11,31 +10,19 @@
      */
     class PropertyManagerFactory extends Factory
     {
-        /**
-         * Residence Type
+        /*
+         * Property Management Company
          */
-        public array $residence_type = [
-            "Lot",
-            "House",
-            "Apartment"
+        public array $companies = [
+            "Lorem Ipsum LLC",
+            "Capital Dolar Land",
+            "Astro Lorem And Holdings",
         ];
 
-        public array $HVAC = [
-            "Central Air Conditioning",
-            "Window Air Conditioners",
-            "Portable Air Conditioners",
-        ];
-
-        public array $parking = [
-            "Residence Parking",
-            "Private Parking",
-            "Paid Parking",
-        ];
-
-        public array $tenant_contract = [
-            "Rent",
-            "Rent To Own",
-            "Owned",
+        public array $account_type = [
+            "Basic",
+            "Startup",
+            "Premium",
         ];
 
         /**
@@ -48,19 +35,12 @@
         public function definition(): array
         {
             return [
-                "residence_type" => array_rand(array_flip($this->residence_type)),
-                "year_built" => Carbon::now()->subYears(random_int(1, 75)),
-                "HVAC" => array_rand(array_flip($this->residence_type)),
-                "parking" => array_rand(array_flip($this->parking)),
-                "sqft" => random_int(1000, 10000),
-                "price_per_sqft" => random_int(75, 500),
-                "buyers_fee" => random_int(1, 16),
-                "description" => $this->faker->sentence(100),
+                "first_name" => $this->faker->firstName,
+                "last_name" => $this->faker->lastName,
+                "phone" => $this->faker->phoneNumber,
+                "account_type" => array_rand(array_flip($this->account_type)),
                 "address" => $this->faker->address,
-                "tenant_contract" => array_rand(array_flip($this->tenant_contract)),
-                "bedrooms" => random_int(1, 10),
-                "bathrooms" => random_int(1, 10),
-                "notes" => $this->faker->sentence(3),
+                "company" => array_rand(array_flip($this->companies))
             ];
         }
     }
