@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="{{ secure_asset('css/mdb.min.css') }}">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
 </head>
 <body>
 <!--Navbar -->
@@ -73,5 +73,15 @@
         @endauth
     </div>
 </main>
+<!-- jQuery -->
+<script type="text/javascript" src="{{ secure_asset('js/jquery.min.js') }}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{{ secure_asset('js/popper.min.js') }}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{{ secure_asset('js/mdb.min.js') }}"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript"></script>
 </body>
 </html>
