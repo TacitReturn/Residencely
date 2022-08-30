@@ -8,7 +8,7 @@
             </div>
             <div class="card-body">
                 <div class="d-flex justify-content-between">
-                    <h5 class="card-title">Residence Type: {{ $property->residence_type }}</h5>
+                    <h5 class="card-title">Residence Type: 0</h5>
                     <a href="{{ route('properties.show', $property->id) }}"
                        class="btn btn-sm btn-success my-auto">View Property</a>
                 </div>
