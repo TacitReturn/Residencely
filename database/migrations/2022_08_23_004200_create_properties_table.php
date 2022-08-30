@@ -14,6 +14,7 @@
         {
             Schema::create("properties", function (Blueprint $table) {
                 $table->id();
+                $table->string("title");
                 $table->integer("sqft");
                 $table->integer("price_per_sqft");
                 $table->string("residence_type");

@@ -57,6 +57,7 @@
         public function definition(): array
         {
             return [
+                "title" => fake()->sentence,
                 "residence_type" => array_rand(array_flip($this->residence_type)),
                 "year_built" => Carbon::now()->subYears(random_int(1, 75)),
                 "HVAC" => array_rand(array_flip($this->HVAC)),
