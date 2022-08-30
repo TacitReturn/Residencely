@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="{{ secure_asset('css/mdb.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- Ecommerce styles -->
+    <link rel="stylesheet" href="{{ asset('css/mdb.ecommerce.min.css')}}">
 </head>
 <body>
 <!--Navbar -->
@@ -39,15 +41,21 @@
                 <a class="nav-link" href="#">
                     <i class="fas fa-gear"></i> Settings</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user"></i> Profile </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                    <a class="dropdown-item" href="#">My account</a>
-                    <a class="dropdown-item" href="#">Log out</a>
-                </div>
-            </li>
+            @auth
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> Profile </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info"
+                         aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item" href="#">My account</a>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <input class="form-control" type="submit" value="Logout">
+                        </form>
+                    </div>
+                </li>
+            @endauth
         </ul>
     </div>
 </nav>
@@ -58,7 +66,8 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="{{ route('properties.index') }}" class="list-group-item list-group-item-action active"
+                        <a href="{{ route('properties.index') }}"
+                           class="list-group-item list-group-item-action active"
                            aria-current="true">
                             Properties
                         </a>
@@ -74,13 +83,13 @@
     </div>
 </main>
 <!-- jQuery -->
-<script type="text/javascript" src="{{ secure_asset('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="{{ secure_asset('js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="{{ secure_asset('js/mdb.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript"></script>
 </body>
