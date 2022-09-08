@@ -1,7 +1,7 @@
 @extends("layouts.app")
 @section("content")
+    <a href="{{ route('properties.create') }}" class="btn btn-success">Create Property</a>
     @foreach($properties as $property)
-
         <div class="card my-5">
             <div class="card-header text-center">
                 <h5 class="card-title">{{ $property->title }}</h5>

@@ -14,6 +14,23 @@
             "year_built",
         ];
 
+        protected $fillable = [
+            "title",
+            "sqft",
+            "price_per_sqft",
+            "residence_type",
+            "bedrooms",
+            "bathrooms",
+            "HVAC",
+            "parking",
+            "tenant_contract",
+            "description",
+            "address",
+            "year_built",
+            "notes",
+            "property_manager_id",
+        ];
+
         public function propertyManager(): BelongsTo
         {
             return $this->belongsTo(PropertyManager::class, "property_manager_id", "id", "");
