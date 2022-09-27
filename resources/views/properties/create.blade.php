@@ -161,20 +161,7 @@
                 </section>
             </div>
             <!--Section: Register Form-->
-
-            <!--Section: Logout Form-->
-            <section class="logout-form py-5 text-center">
-                <p class="logged-user-message pb-2"></p>
-                <a href="login.html" class="btn btn-primary waves-effect">Log in</a>
-                <button class="btn btn-danger waves-effect delete-user">Remove user account</button>
-            </section>
-            <!--Section: Logout Form-->
-
         </div>
-        <!--Grid column-->
-
-        </div>
-        <!--Grid row-->
     </main>
     <!--Main layout-->
 @endsection
