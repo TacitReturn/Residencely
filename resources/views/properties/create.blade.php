@@ -133,7 +133,7 @@
 
                         <div class="text-center mb-2">
 
-                            <button type="submit" class="btn btn-primary mb-4">Create Property</button>
+                            {{--                            <button type="submit" class="btn btn-primary mb-4">Create Property</button>--}}
 
                             {{--                            <p>or sign up with:</p>--}}
 
