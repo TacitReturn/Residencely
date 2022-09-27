@@ -9,6 +9,7 @@
     use Illuminate\Contracts\View\Factory;
     use Illuminate\Contracts\View\View;
     use Illuminate\Http\Response;
+    use Illuminate\Support\Facades\Auth;
     use Illuminate\Support\Facades\DB;
 
     class PropertyController extends Controller
@@ -52,6 +53,8 @@
         public function store(StorePropertyRequest $request)
         {
             $validatedData = $request->validated();
+
+            $validatedData["property_manager_id"] = Auth::id();
 
             $createdProperty = DB::table("properties")->insert($validatedData);
 
