@@ -58,9 +58,9 @@
                             </div>
                             <div class="col">
                                 <div class="md-form md-outline mt-0">
-                                    <input type="text" name="bathrooms" id="bathrooms"
+                                    <input type="number" name="bathrooms" id="bathrooms"
                                            class="form-control">
-                                    <label data-error="wrong" data-success="right"
+                                    <label for="bathrooms" data-error="wrong" data-success="right"
                                            for="register-password-confirm">Bathrooms</label>
                                 </div>
                             </div>

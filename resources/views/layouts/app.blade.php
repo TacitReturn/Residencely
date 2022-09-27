@@ -63,6 +63,11 @@
 <main class="py-4">
     <div class="container">
         @auth
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    {{ $error }}
+                @endforeach
+            @endif
             <div class="row">
                 <div class="col-md-3">
                     <div class="list-group">

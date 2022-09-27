@@ -9,6 +9,7 @@
     use Illuminate\Contracts\View\Factory;
     use Illuminate\Contracts\View\View;
     use Illuminate\Http\Response;
+    use Illuminate\Support\Facades\DB;
 
     class PropertyController extends Controller
     {
@@ -50,7 +51,11 @@
          */
         public function store(StorePropertyRequest $request)
         {
-            dd($request->all());
+            $validatedData = $request->validated();
+
+            $createdProperty = DB::table("properties")->insert($validatedData);
+
+            return $createdProperty;
         }
 
         /**
