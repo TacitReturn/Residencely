@@ -121,19 +121,19 @@
                             </small>
                         </div>
 
-                        <div class="text-center pb-2">
-                            <div class="form-check pl-0 mb-3">
-                                <input type="checkbox" class="form-check-input filled-in" id="new1">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="new1">Subscribe
-                                    to our
-                                    newsletter</label>
-                            </div>
+                        {{--                        <div class="text-center pb-2">--}}
+                        {{--                            <div class="form-check pl-0 mb-3">--}}
+                        {{--                                <input type="checkbox" class="form-check-input filled-in" id="new1">--}}
+                        {{--                                <label class="form-check-label small text-uppercase card-link-secondary" for="new1">Subscribe--}}
+                        {{--                                    to our--}}
+                        {{--                                    newsletter</label>--}}
+                        {{--                            </div>--}}
 
-                        </div>
+                        {{--                        </div>--}}
 
                         <div class="text-center mb-2">
 
-                            {{--                            <button type="submit" class="btn btn-primary mb-4">Create Property</button>--}}
+                            <button type="submit" class="btn btn-primary mb-4">Create Property</button>
 
                             {{--                            <p>or sign up with:</p>--}}
 
