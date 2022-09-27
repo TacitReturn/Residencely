@@ -63,10 +63,19 @@
 <main class="py-4">
     <div class="container">
         @auth
-            @if($errors->any())
-                @foreach($errors->all() as $error)
-                    {{ $error }}
-                @endforeach
+            {{--            @if($errors->any())--}}
+            {{--                <ul class="list-group">--}}
+            {{--                    @foreach($errors->all() as $error)--}}
+            {{--                        <li class="alert alert-success" role="alert">--}}
+            {{--                            {{ $error }}--}}
+            {{--                        </li>--}}
+            {{--                    @endforeach--}}
+            {{--                </ul>--}}
+            {{--            @endif--}}
+            @if(session()->has("status"))
+                <div class="alert alert-success" role="alert">
+                    {{ session("status") }}
+                </div>
             @endif
             <div class="row">
                 <div class="col-md-3">

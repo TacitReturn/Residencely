@@ -32,7 +32,8 @@
          */
         public function index(): View|Factory|Application
         {
-            return view("properties.index", ["properties" => Property::all()]);
+            return view("properties.index",
+                ["properties" => Property::all()]);
         }
 
         /**
@@ -58,6 +59,8 @@
             $validatedData["property_manager_id"] = Auth::id();
 
             DB::table("properties")->insert($validatedData);
+
+            $request->session()->flash("status", "Property created successfully!");
 
             return redirect()->route("properties.index");
         }
