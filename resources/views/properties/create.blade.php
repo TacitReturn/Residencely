@@ -11,8 +11,9 @@
                 <!--Section: Register Form-->
                 <section class="mt-4 mb-5 register-form">
 
-                    <form class="needs-validation" novalidate autocomplete="off">
-
+                    <form action="{{ route('properties.store') }}" method="POST" class="needs-validation" novalidate
+                          autocomplete="off">
+                        @csrf
                         <div class="form-row">
                             <div class="col">
                                 <div class="md-form md-outline mt-0">
@@ -151,11 +152,13 @@
 
                             <hr class="mt-4">
 
-                            <p>By clicking
-                                <em>Sign up</em> you agree to our
-                                <a href="#" data-toggle="modal" data-target="#terms-modal">terms of service</a>
-                            </p>
+                            {{--                            <p>By clicking--}}
+                            {{--                                <em>Sign up</em> you agree to our--}}
+                            {{--                                <a href="#" data-toggle="modal" data-target="#terms-modal">terms of service</a>--}}
+                            {{--                            </p>--}}
+                        </div>
                     </form>
+                </section>
             </div>
             <!--Section: Register Form-->
 

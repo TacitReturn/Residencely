@@ -50,7 +50,7 @@
          */
         public function store(StorePropertyRequest $request)
         {
-            //
+            dd($request->all());
         }
 
         /**
