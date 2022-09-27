@@ -133,24 +133,24 @@
 
                         <div class="text-center mb-2">
 
-                            <button type="submit" class="btn btn-primary mb-4">Sign Up</button>
+                            <button type="submit" class="btn btn-primary mb-4">Create Property</button>
 
-                            <p>or sign up with:</p>
+                            {{--                            <p>or sign up with:</p>--}}
 
-                            <a type="button" class="btn-floating btn-fb btn-sm mr-1">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a type="button" class="btn-floating btn-tw btn-sm mr-1">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a type="button" class="btn-floating btn-li btn-sm mr-1">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a type="button" class="btn-floating btn-git btn-sm">
-                                <i class="fab fa-github"></i>
-                            </a>
+                            {{--                            <a type="button" class="btn-floating btn-fb btn-sm mr-1">--}}
+                            {{--                                <i class="fab fa-facebook-f"></i>--}}
+                            {{--                            </a>--}}
+                            {{--                            <a type="button" class="btn-floating btn-tw btn-sm mr-1">--}}
+                            {{--                                <i class="fab fa-twitter"></i>--}}
+                            {{--                            </a>--}}
+                            {{--                            <a type="button" class="btn-floating btn-li btn-sm mr-1">--}}
+                            {{--                                <i class="fab fa-linkedin-in"></i>--}}
+                            {{--                            </a>--}}
+                            {{--                            <a type="button" class="btn-floating btn-git btn-sm">--}}
+                            {{--                                <i class="fab fa-github"></i>--}}
+                            {{--                            </a>--}}
 
-                            <hr class="mt-4">
+                            {{--                            <hr class="mt-4">--}}
 
                             {{--                            <p>By clicking--}}
                             {{--                                <em>Sign up</em> you agree to our--}}
