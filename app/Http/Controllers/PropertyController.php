@@ -8,6 +8,7 @@
     use Illuminate\Contracts\Foundation\Application;
     use Illuminate\Contracts\View\Factory;
     use Illuminate\Contracts\View\View;
+    use Illuminate\Http\RedirectResponse;
     use Illuminate\Http\Response;
     use Illuminate\Support\Facades\Auth;
     use Illuminate\Support\Facades\DB;
@@ -48,17 +49,17 @@
          * Store a newly created resource in storage.
          *
          * @param  StorePropertyRequest  $request
-         * @return void
+         * @return RedirectResponse
          */
-        public function store(StorePropertyRequest $request)
+        public function store(StorePropertyRequest $request): RedirectResponse
         {
             $validatedData = $request->validated();
 
             $validatedData["property_manager_id"] = Auth::id();
 
-            $createdProperty = DB::table("properties")->insert($validatedData);
+            DB::table("properties")->insert($validatedData);
 
-            return $createdProperty;
+            return redirect()->route("properties.index");
         }
 
         /**
